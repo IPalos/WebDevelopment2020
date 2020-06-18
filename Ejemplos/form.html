@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
+
 <body>
 	<h1>Registro en línea</h1>
 
@@ -19,8 +21,8 @@
 
 		<!--Cuadro de texto para que el ususario ingrese su correo  -->
 		<div style="height: 50px;">
-		<input type="email" name="" id="" placeholder="Email">
-			
+			<input type="email" name="" id="" placeholder="Email">
+
 		</div>
 
 
@@ -31,15 +33,47 @@
 
 
 		<!-- Preguntar por el género de la persona utilziando radiales -->
+		<div style="height: 50px;">
+			<label for="gender">Género:</label>
+			<input type="radio" name="gender" id="">Masculino
+			<input type="radio" name="gender" id="">Femenino
+		</div>
+
+		<div style="height: 50px;">
+			<label for="race">Raza:</label>
+			<input type="radio" name="race" id="">Cyborg
+			<input type="radio" name="race" id="">Alien
+			<input type="radio" name="race" id="">GMB
+		</div>
+
+
 
 		<!-- Utilizar checkboxes para preguntar qué redes sociales utilizan -->
 
+
+		
 		<!-- Preguntar por la edad utilizando un componente deplegable -->
 		
+		<div style="height: 50px;"> 
+			<label for="edad">Edad: </label>
+			<select name="edad" id="cars">
+				<option value="0-15">0-15</option>
+				<option value="16-30">16-30</option>
+				<option value="31-45">31-45</option>
+				<option value="46-60">46-60</option>
+				<option value="61-75">61-75</option>
+				<option value=">75">>75</option>
+			</select>
+		
+		</div>
+
+
+
 		<!-- Boton de REGISTRAR -->
 
 	</form>
 
 
 </body>
+
 </html>
