@@ -1,0 +1,22 @@
+h1 {
+	color: cornflowerblue;
+	font-size: xx-large;
+}
+
+p{
+	color: darkgrey;
+	font-weight: 200;
+}
+
+.importante{
+	font-weight: 800;
+}
+
+.noImportante{
+	font-weight: 300;
+}
+
+#p1{
+	color:dimgray;
+}
+	
