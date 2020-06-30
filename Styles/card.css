@@ -1,0 +1,63 @@
+
+		h1{
+			color: darksalmon;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		h3{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		p{
+			font-weight: 200;
+		}
+
+		body {
+			background-color: lightblue;
+			color: black;
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		div {
+			height: 20px;
+		}
+
+		.card{
+			display: inline-block;
+			background-color: white;
+			width: 250px;
+			height: 350px;
+			padding: 30px 10px 20px 10px ;
+			box-shadow: black 5px 5px 10px;
+		}
+
+		.tarjetita{
+			display: inline-block;
+			background-color: white;
+			width: 250px;
+			height: 350px;
+			padding: 30px 10px 20px 10px ;
+			box-shadow: black 5px 5px 10px;
+		}
+
+		.separador{
+			height: 35px;
+		}
+
+		#avatar {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+
+		.caja{
+			margin: 20px 20px 20px 20px ;
+			background-color: #ffffff;
+			height: 100px;
+			padding: 20px 10px 10px 10px ;
+			border: mediumblue 5px solid;
+		}
+		.icon{
+			font-size: 35px;
+		}
