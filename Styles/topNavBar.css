@@ -33,7 +33,7 @@ body{
 	font-size: 18px;
 
 	/*  */
-	float: right;
+	float: left;
 }
 
 /* Estilo para los links cuando pasas el mouse sobre él */
@@ -48,5 +48,4 @@ body{
 	color: #56351e;
 	color: #2660A4;
 	color: #edf7f6;
-
 }
