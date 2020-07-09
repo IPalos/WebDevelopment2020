@@ -34,11 +34,17 @@ body{
 
 	/*  */
 	float: left;
+
+	transition: 
+		background-color .5s,
+	  font-size .5s
+	;
 }
 
 /* Estilo para los links cuando pasas el mouse sobre él */
 .top-nav-bar a:hover{
 	background-color: #C47335;
+	font-size: 22px;
 }
 
 /* PALETA DE COLORES */
