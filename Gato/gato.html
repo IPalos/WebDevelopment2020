@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<!-- HEAD -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gato</title>
+	<link rel="stylesheet" href="./estilosGato.css"> 
+</head>
+
+
+<!-- BODY -->
+<body>
+	
+<h1>GATO</h1>
+
+	<!-- Construir el layout -->
+	<table>
+		<tr>
+			<td onclick="Play('00')" id="00" class="celda"></td>
+			<td onclick="Play('01')" id="01" class="celda"></td>
+			<td onclick="Play('02')" id="02" class="celda"></td>
+		</tr>
+		<tr>
+			<td onclick="Play('10')" id="10" class="celda"></td>
+			<td onclick="Play('11')" id="11" class="celda"></td>
+			<td onclick="Play('12')" id="12" class="celda"></td>
+		</tr>
+		<tr>
+			<td onclick="Play('20')" id="20" class="celda"></td>
+			<td onclick="Play('21')" id="21" class="celda"></td>
+			<td onclick="Play('22')" id="22" class="celda"></td>
+		</tr>
+	</table>
+
+	<p id="jugador">Jugador actual: J1</p>
+
+	<script src="./gato.js"></script>
+</body>
+</html>

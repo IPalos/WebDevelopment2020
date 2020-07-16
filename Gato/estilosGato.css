@@ -1,0 +1,20 @@
+/* Crear el estilo del tablero */
+
+/* Crear un template para las casillas X,O,vacío */
+.celda{
+	background-color: white;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	overflow: auto;
+	border: solid 1pt red;
+
+}
+
+.j1{
+	background-color: teal;
+}
+
+.j2{
+	background-color: royalblue;
+}
