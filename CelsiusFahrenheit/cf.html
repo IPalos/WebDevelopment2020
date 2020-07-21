@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Celsius 2 Fahrenheit</title>
+
+	<link rel="stylesheet" href="./cf.css">
+</head>
+
+
+
+<body>
+	
+	<h1>Celsius a Fahrenheit</h1>
+
+	
+	<div>
+		<label for="celsius">Celsius</label>
+		<input id="celsius" onchange="guardarInputC()" type="text">
+	</div>
+	<div>
+		<label for="fahrenheit">Fahrenheit</label>
+		<input id="fahrenheit" onchange="guardarInputF()" type="text">
+	</div>
+
+	<input type="button" onclick="CaF()" value="Convertir a Fahrenheit">
+	<input type="button" onclick="FaC()" value="Convertir a Celsius">
+
+
+<script src="./cf.js"></script>
+
+</body>
+</html>

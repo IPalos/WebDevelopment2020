@@ -1,20 +1,38 @@
 /* Crear el estilo del tablero */
+body{
+	background-color: #A0ACAD;
+	color: #170312;
+	font-family: 'Play', sans-serif;
+	text-align: center;
+	display: block;
+
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: black 5px 5px 5px;
+	padding: 0px;
+	border: solid #170312 1px;
+
+
+}
+
+
 
 /* Crear un template para las casillas X,O,vacío */
 .celda{
-	background-color: white;
+	background-color: #33032F;
 	width: 100px;
 	height: 100px;
-	margin: 5px;
 	overflow: auto;
-	border: solid 1pt red;
-
+	margin: 0px;
 }
 
 .j1{
-	background-color: teal;
+	background-color: #531253;
 }
 
 .j2{
-	background-color: royalblue;
+	background-color: #531253;
 }
