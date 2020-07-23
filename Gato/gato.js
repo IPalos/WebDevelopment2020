@@ -1,6 +1,8 @@
 // CEREBRO
 var currentPlayer = "jugador1";
 
+var pares = ["00","02","20","22","11"];
+var nones = ["10","01","12","21"];
 
 var tablero =
 	[[0, 0, 0],
@@ -13,6 +15,9 @@ function Play(celda) {
 
 	var celdalibre = leerCelda(celda);
 	console.log(tablero);
+
+
+
 
 	if (celdalibre) {
 		if ("jugador1" == currentPlayer) {
@@ -33,6 +38,9 @@ function Play(celda) {
 			currentPlayer = "jugador1";
 		}
 
+		checarVictoria(celda);
+
+
 		document.getElementById("jugador").innerHTML = "Jugador Actual: " + currentPlayer;
 	}
 
@@ -43,8 +51,14 @@ function Play(celda) {
 
 
 // Registrar la condicion de victoria
+function checarVictoria(celda){
+	// La celda que escribi se encuentra en el conjunto "pares"?
+	if(pares.includes(celda)){
 
-// Administrar turno
+	}
+}
+
+
 
 // Mostrar los X y O que estan en el CSS
 
