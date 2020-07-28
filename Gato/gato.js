@@ -1,8 +1,9 @@
 // CEREBRO
 var currentPlayer = "jugador1";
+var victory = false;
 
-var pares = ["00","02","20","22","11"];
-var nones = ["10","01","12","21"];
+var pares = ["00", "02", "20", "22", "11"];
+var nones = ["10", "01", "12", "21"];
 
 var tablero =
 	[[0, 0, 0],
@@ -20,6 +21,7 @@ function Play(celda) {
 
 
 	if (celdalibre) {
+		victory = checarVictoria(currentPlayer[7] * 1, celda); 
 		if ("jugador1" == currentPlayer) {
 			// Juega j1
 			// Modificar el JS
@@ -35,13 +37,17 @@ function Play(celda) {
 			// Modificar el HTML
 			document.getElementById(celda).className += " j2";
 
+
 			currentPlayer = "jugador1";
 		}
 
-		checarVictoria(celda);
+		if(victory){
+		document.getElementById("victoria").innerText = "GANASTE!"
 
+		}
 
 		document.getElementById("jugador").innerHTML = "Jugador Actual: " + currentPlayer;
+
 	}
 
 
@@ -51,14 +57,38 @@ function Play(celda) {
 
 
 // Registrar la condicion de victoria
-function checarVictoria(celda){
-	// La celda que escribi se encuentra en el conjunto "pares"?
-	if(pares.includes(celda)){
+function checarVictoria(jugador, celda) {
+	var fila = celda[0] * 1;
+	var columna = celda[1] * 1;
+	console.log(fila);
+	var f = checarFilas(jugador, fila);
+	var c = checarCols(jugador, columna);
+	if (f || c) {
+		return true
+	}
+	else return false
 
+
+}
+
+function checarFilas(jugador, fila) {
+	for (let celda = 0; celda < tablero[fila].length; celda++) {
+		if (celda == jugador) {
+			return true;
+		}
+		else return false;
+		
 	}
 }
 
-
+function checarCols(jugador, col) {
+	for (let fila = 0; fila < tablero.length; fila++) {
+		if (tablero[fila][col] == jugador) {
+			return true;
+		}
+		else return false;
+	}
+}
 
 // Mostrar los X y O que estan en el CSS
 
