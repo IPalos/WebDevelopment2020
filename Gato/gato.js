@@ -2,8 +2,8 @@
 var currentPlayer = "jugador1";
 var victory = false;
 
-var pares = ["00", "02", "20", "22", "11"];
-var nones = ["10", "01", "12", "21"];
+var pares = ["00", "22", "11"];
+var impares = ["02", "20", "11"];
 
 var tablero =
 	[[0, 0, 0],
@@ -60,10 +60,10 @@ function Play(celda) {
 function checarVictoria(jugador, celda) {
 	var fila = celda[0] * 1;
 	var columna = celda[1] * 1;
-	console.log(fila);
 	var f = checarFilas(jugador, fila);
 	var c = checarCols(jugador, columna);
-	if (f || c) {
+	var d = checarDiags(jugador)
+	if (f || c || d) {
 		return true
 	}
 	else return false
@@ -71,23 +71,25 @@ function checarVictoria(jugador, celda) {
 
 }
 
+// Devuelve True si todas las celdas de la misma fila son iguales
 function checarFilas(jugador, fila) {
-	for (let celda = 0; celda < tablero[fila].length; celda++) {
-		if (celda == jugador) {
-			return true;
-		}
-		else return false;
-		
-	}
+	return tablero[fila].every(e => e==jugador)
 }
 
 function checarCols(jugador, col) {
+	t=[]
 	for (let fila = 0; fila < tablero.length; fila++) {
-		if (tablero[fila][col] == jugador) {
-			return true;
-		}
-		else return false;
+		t[fila] =tablero[fila][col]
 	}
+	return t.every(e=> e==jugador)
+}
+
+function checarDiags(jugador){
+	p=[tablero[0][0],tablero[1][1],tablero[2][2]]
+	i=[tablero[2][0],tablero[1][1],tablero[0][2]]
+
+	return (p.every(e=> e==jugador) || i.every(e=>e==jugador))
+	
 }
 
 // Mostrar los X y O que estan en el CSS
