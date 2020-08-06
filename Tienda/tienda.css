@@ -1,0 +1,28 @@
+body{
+	background-color: lightgray;
+}
+
+.product-card{
+	background-color: white;
+	width:250px;
+	height: 220px;
+	box-shadow: darkgray 3px 3px 3px;
+	text-align: center;
+	padding: 20px;
+	margin: 10px;
+	position: relative;
+}
+
+.precio{
+	font-size: 20pt;
+	position: absolute;
+	bottom: 5px;
+	right: 25px;
+}
+
+.modelo{
+	font-size: 25pt;
+	position: absolute;
+	top: 5px;
+	left: 25px;
+}
