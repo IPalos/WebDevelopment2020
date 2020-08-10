@@ -7,14 +7,25 @@
 	<link rel="stylesheet" href="./tienda.css">
 </head>
 <body>
-	
-	<div class="product-card">
-		<p class="modelo">Modelo</p>
-		<p class="marca">Marca</p>
-		<p class="precio">Precio</p>
-		<p class="depto">Departamento</p>
-		<p class="categoria">Categoria</p>
+ 
+	<div id="productos">
+
+
+
 	</div>
+	<form action="">
+		<input type="button" value="Agregar Producto" onclick="AgregarProducto()">
+		<div>
+			<label for="modelo">Modelo</label>
+			<input type="text" name="modelo" id="text-puma">
+			<label for="marca">Marca</label>
+			<label for="precio">Precio</label>
+			<label for="depto">Departamento</label>
+			<label for="categoria">Categoría</label>
+		</div>
+
+	</form>
+
 
 	<script src="./tienda.js"></script>
 </body>

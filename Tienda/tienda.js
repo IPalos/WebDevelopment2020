@@ -57,25 +57,27 @@
 // 	"categoria": "correr"
 // }
 
+class Tenis{
+	constructor(modelo, marca, precio,categoria, depto){
+		this.model = modelo
+		this.brand = marca
+		this.price = precio
+		this.category = categoria
+		this.dept = depto
+	}
+}
+
 var productos = []
+var prod = document.getElementById("productos")
 
 
-// LISTA.FILTER
-var unisex = productos.filter(tenis => tenis.departamento == "Unisex")
+function AgregarProducto(modelo, marca, precio, categoria, depto){
+	var e = new Tenis (modelo, marca, precio, categoria, depto)
+	productos.push(e)
+	prod.innerHTML = ""
+	productos.forEach(p => CrearTarjeta(p.model, p.brand, p.price, p.dept, p.category))
 
-var deportivo = productos.filter(tenis => tenis.categoria == "deportivo")
-
-console.log(unisex)
-console.log(deportivo)
-
-//  LISTA.FOREACH
-productos.forEach(
-	p => (console.log("Nombre del producto: " + p.modelo))
-)
-
-productos.forEach(p => CrearTarjeta(p.modelo, p.marca, p.precios[2], p.departamento, p.categoria))
-
-
+}
 function GenerarInventario(n) {
 	var lista = []
 	for (let index = 0; index < n; index++) {
@@ -90,7 +92,6 @@ function CrearTarjeta(modelo, marca, precio, depto, categoria) {
 	// Crea la tarjeta
 	card = document.createElement("div")
 	card.setAttribute("class", "product-card")
-
 	// Crea el elemento "modelo" y lo agrega a la tarjeta
 	m = document.createElement("p")
 	m.innerText = modelo
@@ -121,5 +122,7 @@ function CrearTarjeta(modelo, marca, precio, depto, categoria) {
 
 
 	// Agrega la tarjeta al body del documento
-	document.body.appendChild(card)
+	prod.appendChild(card)
 }
+
+
