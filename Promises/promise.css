@@ -1,0 +1,16 @@
+p{
+	background-color: gray;
+	font-family: sans-serif;
+	font-size: 24pt;
+	padding: 8px;
+}
+
+.acc{
+	background-color: lightgreen;
+	color: darkgreen;
+}
+
+.reg{
+	background-color: lightcoral;
+	color: darkred;
+}

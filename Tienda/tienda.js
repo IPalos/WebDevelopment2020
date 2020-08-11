@@ -70,9 +70,23 @@ class Tenis{
 var productos = []
 var prod = document.getElementById("productos")
 
+var marca;
+var modelo;
+var precio;
+var depto;
+var categoria;
 
-function AgregarProducto(modelo, marca, precio, categoria, depto){
-	var e = new Tenis (modelo, marca, precio, categoria, depto)
+
+
+function AgregarProducto(){
+	marca = document.getElementById("t-marca").value;
+	modelo = document.getElementById("t-modelo").value;
+	precio = document.getElementById("t-precio").value;
+	depto = document.getElementById("t-depto").value;
+	categoria = document.getElementById("t-categoria").value;
+
+
+	var e = new Tenis (modelo, marca, precio, depto, categoria)
 	productos.push(e)
 	prod.innerHTML = ""
 	productos.forEach(p => CrearTarjeta(p.model, p.brand, p.price, p.dept, p.category))
